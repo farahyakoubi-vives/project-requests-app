@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{61e1bcb1-84c9-4100-b24b-a26316e29bed}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{641a0f3b-2f8f-452a-9500-70066c29f682}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Algemeen" languagecode="1043" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{1203c646-5efb-4b0a-a4f7-41b84555f303}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Algemeen" languagecode="1043" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{66be8d94-edf6-4569-a83f-2c71f8896415}">
+                        <labels>
+                          <label description="Name" languagecode="1043" />
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="fy_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="fy_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc8b68a0-2def-4a3f-bdef-b47b12ab9ef1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Requestor Name" languagecode="1043" />
+                        </labels>
+                        <control id="fy_requestorname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="fy_requestorname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1b3a6d09-862f-4832-bd81-ed11c4c73e62}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Requestor Email" languagecode="1043" />
+                        </labels>
+                        <control id="fy_requestoremail" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="fy_requestoremail" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fb70a075-0bc8-4065-aa8c-fd94e7dc1b90}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Company Name" languagecode="1043" />
+                        </labels>
+                        <control id="fy_companyname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="fy_companyname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c3b28754-042b-4ca5-a22f-f301e9cb20fc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Company Details" languagecode="1043" />
+                        </labels>
+                        <control id="fy_companydetails" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="fy_companydetails" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e86dfa84-11b8-4da3-8141-34d4d4722b22}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tool" languagecode="1043" />
+                        </labels>
+                        <control id="fy_tool" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_tool" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34131ba1-5e9f-4e51-9904-0f200e8c8616}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Short Description" languagecode="1043" />
+                        </labels>
+                        <control id="fy_shortdescription" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="fy_shortdescription" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7e987c51-57f0-49f3-8357-1c93405db9ac}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Preferred Start Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_preferredstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_preferredstartdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f77be983-f57e-407d-8e7b-353b33007563}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Preffered End Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_prefferedenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_prefferedenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1b649c6f-7a81-4e99-a7bc-2ddb0e444b0a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Existing Customer" languagecode="1043" />
+                        </labels>
+                        <control id="fy_existingcustomer" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_existingcustomer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fa648b41-1b2b-4c23-bd36-4695120f937a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estimated Budget" languagecode="1043" />
+                        </labels>
+                        <control id="fy_estimatedbudget" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="fy_estimatedbudget" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d2c6ae3-ad8e-4c02-9049-a2022c70da6b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Project Status" languagecode="1043" />
+                        </labels>
+                        <control id="fy_projectstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_projectstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0a2af024-9ed2-4a90-991f-e68836e091ce}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Presales Team" languagecode="1043" />
+                        </labels>
+                        <control id="fy_presalesteam" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="fy_presalesteam" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1b81ff7e-2a3c-4ba0-bc72-cf2343112315}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Internal Start Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_internalstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_internalstartdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4f3f768f-7c06-464b-ae59-9bf1ebc41d99}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Internal End Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_internalenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_internalenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e58d055-f0b0-423a-b14f-9b53fb1b9f17}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dev Started" languagecode="1043" />
+                        </labels>
+                        <control id="fy_devstarted" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_devstarted" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a10e89a8-ba69-4a78-bac0-06ee9471d58f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dev Team" languagecode="1043" />
+                        </labels>
+                        <control id="fy_devteam" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="fy_devteam" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9d0ad2b8-2b4a-4c4f-bcfe-a7a6caf3f8a0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ready for Testing" languagecode="1043" />
+                        </labels>
+                        <control id="fy_readyfortesting" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_readyfortesting" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{654d0dfd-dcae-4943-a78a-b9ba44b8a5a2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ready for Production" languagecode="1043" />
+                        </labels>
+                        <control id="fy_readyforproduction" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_readyforproduction" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7d6075c2-3a5f-451d-9c9c-13e8c0c8ddf3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Go Live Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_golivedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_golivedate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9647c022-5397-432c-bb03-d75c58aa8097}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Go Live Confirmed" languagecode="1043" />
+                        </labels>
+                        <control id="fy_goliveconfirmed" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="fy_goliveconfirmed" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ab913a56-f8b7-4b27-aa6d-b1f2d64fda6d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Billing Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_billingdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_billingdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c02486b9-9f51-46b4-940f-b6b475f51e6e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Final Budget" languagecode="1043" />
+                        </labels>
+                        <control id="fy_finalbudget" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="fy_finalbudget" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{211a16d8-09e5-457a-8d50-3f0e4dd06a19}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Payment Date" languagecode="1043" />
+                        </labels>
+                        <control id="fy_paymentdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fy_paymentdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bc1f53c7-aba5-4bfd-8a4c-347b268c1e3a}">
+                        <labels>
+                          <label description="Eigenaar" languagecode="1043" />
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{902e3142-ffe3-42a8-af57-47a56773c2a6}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cc0ce888-c2ba-48c0-9e79-946c09581ded}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+            <cell id="{99ace810-de97-447e-ae92-6fd7e2cdf0d5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+            <cell id="{9a8a9fc7-985c-46ad-9a94-f11bd294ee6d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{09318fcc-ec95-47e7-b15e-6dd9d702e4f3}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{07061507-24b9-46d9-9131-3f12aff2b646}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+            <cell id="{3ed55356-6d0e-4ba9-a83c-0288312f3472}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+            <cell id="{a96bcf7b-50cb-41a6-93c9-6dc57f2e3e2c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1043" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informatie" languagecode="1043" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Een formulier voor deze entiteit." languagecode="1043" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,85 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "fy_sharedcommondataserviceforapps_502f6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_teams": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "fy_sharedteams_1b50a"
+        },
+        "api": {
+          "name": "shared_teams"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "0b6fd899-aec6-4f11-85d3-6e08b66d221f"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "fy_projectrequest",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Post_message_in_a_chat_or_channel": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "47e07608-90d0-44ca-994e-7e2fafbdbde7"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_teams",
+              "operationId": "PostMessageToConversation",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+            },
+            "parameters": {
+              "poster": "Flow bot",
+              "location": "Channel",
+              "body/recipient/groupId": "04ec66f2-d175-40bd-8707-a2f641d4a01b",
+              "body/recipient/channelId": "19:bw_X6f-VuVtEIvs41iuHZgzRhAO1alRYb-y2P_kNdlE1@thread.tacv2",
+              "body/messageBody": "<p>New Project Request Submitted! <br>\n<br>\nProject Name: @{triggerOutputs()?['body/fy_name']}<br>\nRequestor: @{triggerOutputs()?['body/fy_requestorname']}<br>\nCompany Name: @{triggerOutputs()?['body/fy_companyname']}<br>\nDescription: @{triggerOutputs()?['body/fy_shortdescription']}<br>\nPreferred Start Date: @{triggerOutputs()?['body/fy_preferredstartdate']}<br>\nEstimated Budget: @{triggerOutputs()?['body/fy_estimatedbudget']}<br>\nExisting Customer: @{triggerOutputs()?['body/fy_existingcustomer']}<br>\n<br>\nPlease follow up in the Project Requests App. </p>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_fy_projectrequest" />
+  <EntityRelationship Name="lk_fy_projectrequest_createdby" />
+  <EntityRelationship Name="lk_fy_projectrequest_modifiedby" />
+  <EntityRelationship Name="owner_fy_projectrequest" />
+  <EntityRelationship Name="team_fy_projectrequest" />
+  <EntityRelationship Name="TransactionCurrency_fy_ProjectRequest" />
+  <EntityRelationship Name="user_fy_projectrequest" />
+</EntityRelationships>

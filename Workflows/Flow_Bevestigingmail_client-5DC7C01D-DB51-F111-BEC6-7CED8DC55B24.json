@@ -1,0 +1,84 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "fy_sharedoffice365_71b68"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "fy_sharedcommondataserviceforapps_502f6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "77b561c5-43c0-4f04-92d8-1375c9e72663"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "fy_projectrequest",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Send_an_email_(V2)": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "7f957244-58e0-4a23-a1ed-695b6bdbefb2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@triggerOutputs()?['body/fy_requestoremail']",
+              "emailMessage/Subject": "Your project request has been submitted successfully",
+              "emailMessage/Body": "<p>Dear @{triggerOutputs()?['body/fy_requestorname']},<br>\n<br>\nThank you for submitting your project request. Here is an overview of your request:<br>\n<br>\nProject Name: @{triggerOutputs()?['body/fy_name']}<br>\nCompany: @{triggerOutputs()?['body/fy_companyname']}<br>\nDescription: @{triggerOutputs()?['body/fy_shortdescription']}<br>\nPreferred Start Date: @{triggerOutputs()?['body/fy_preferredstartdate']}<br>\nPreffered End Date: @{triggerOutputs()?['body/fy_prefferedenddate']}<br>\nStatus: New<br>\n<br>\nOur sales team will contact you shortly.<br>\n<br>\nKind regards<br>\ndelaware<br>\n<br/>\n<img src=\"https://www.delaware.pro/getattachment/a8faebfb-d24f-4cd2-b636-34f506b4d973/delaware-logo-cmyk.jpg\" width=\"200\"/>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}
