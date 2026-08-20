@@ -1,4 +1,4 @@
-# project-requests-app
+# Project Requests App
 
 A Microsoft Power Platform solution for managing client project requests, built as part of the Low Code Development course.
 
