@@ -14,6 +14,7 @@ Project requests from (potential) clients arrive through various channels such a
 
 ## Solution Components
 
+| Component | Purpose |
 |---|---|
 | **Dataverse** | Central data storage for all project requests |
 | **Canvas App** | Client-facing app to submit and track requests |
